@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+React Food App
+This is a food recipe management application built with React, developed as a code-along project from the Udemy course "React JS Crash Course 2023 - Build A Food Managing App". It leverages the Spoonacular Recipe and Food API to fetch and display recipe information.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
+Features
 
-## Available Scripts
+Technologies Used
 
-In the project directory, you can run:
+API Key Setup
 
-### `npm start`
+Installation and Local Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Project Showcase
 
-### `npm test`
+Course Reference
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+License
 
-### `npm run build`
+Features
+Recipe Search: Search for recipes using keywords, powered by the Spoonacular API.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dynamic Display: View fetched recipes with their images and titles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Add to Favorites: Save your favorite recipes to a local favorites list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Remove from Favorites: Easily remove recipes from your favorites.
 
-### `npm run eject`
+Persistent Favorites: Favorites are saved in your browser's local storage, so they persist across sessions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Filter Favorites: Search and filter through your saved favorite recipes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Theme Toggling: Switch between light and dark themes for a personalized experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Technologies Used
+React.js: Frontend JavaScript library for building user interfaces.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Spoonacular Recipe and Food API: For fetching comprehensive recipe and food data.
 
-## Learn More
+HTML5 & CSS3: For structuring and styling the application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+JavaScript (ES6+): Core programming language.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React Hooks (useState, useEffect, useCallback, useMemo, useContext, useReducer): For state management, side effects, performance optimization, and global state.
 
-### Code Splitting
+Local Storage: For client-side data persistence (favorites).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+API Key Setup
+This application requires an API key from Spoonacular to function correctly. Your API key should be kept private and never committed directly to your public repository.
 
-### Analyzing the Bundle Size
+Get a Spoonacular API Key:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Go to the Spoonacular Food API Console.
 
-### Making a Progressive Web App
+Sign up or log in to get your free API key.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Create a .env file:
 
-### Advanced Configuration
+In the root directory of this project (the same directory as package.json), create a new file named .env.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Add your API key to .env:
 
-### Deployment
+Inside the .env file, add the following line, replacing YOUR_SPOONACULAR_API_KEY with the actual key you obtained from Spoonacular:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+REACT_APP_SPOONACULAR_API_KEY=YOUR_SPOONACULAR_API_KEY
 
-### `npm run build` fails to minify
+Important: The REACT_APP_ prefix is essential for Create React App to expose this environment variable to your frontend code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ensure .env is in .gitignore:
+
+Verify that your .gitignore file (also in the root directory) contains the line .env. This prevents your API key from being accidentally pushed to GitHub. If you previously committed .env, you might need to untrack it using git rm --cached .env before committing again.
+
+Installation and Local Setup
+To get this project up and running on your local machine:
+
+Clone the repository:
+
+git clone https://github.com/DaveCDowdy/ReactFoodApp.git
+
+
+Navigate to the project directory:
+
+cd ReactFoodApp
+
+Install dependencies:
+
+npm install
+# or yarn install
+
+Set up your API key as described in the API Key Setup section above.
+
+Start the development server:
+
+npm start
+# or yarn start
+
+This will open the application in your browser, usually at http://localhost:3000.
+
+Usage
+Use the search bar to find recipes by ingredient or dish name.
+
+Click the "Add to Favorites" button on any recipe card to save it.
+
+Your saved favorites will appear in the "Favorites" section.
+
+Click "Remove from favorites" to remove an item.
+
+Use the "Search Favorites" input to filter your saved recipes.
+
+Click the theme button to toggle between light and dark modes.
+
+Project Showcase
+This repository serves as a showcase of my React development skills, including:
+
+Component-based architecture
+
+State management with useState and useReducer
+
+Side effects with useEffect
+
+Performance optimization with useCallback and useMemo
+
+Context API for global state management (theming)
+
+API integration with fetch
+
+Local Storage for data persistence
+
+Basic CSS styling
+
+Course Reference
+This project was built as a code-along exercise from the Udemy course:
+React JS Crash Course 2023 - Build A Food Managing App
+Instructor: Sangam Mukherjee
+
+License
+This project is open-source and available under the MIT License.
